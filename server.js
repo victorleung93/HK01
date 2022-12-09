@@ -10,6 +10,27 @@ const {surveyList}=require('./db/models/surveyList.server.model');
 const {surveyResponse}=require('./db/models/surveyResponse.server.model');
 const {signUp}=require('./db/models/signUp.server.model');
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCjrn9Ndd7voLHzBDGKaSnpu9vx0Dm4PwU",
+  authDomain: "hk01-9db2f.firebaseapp.com",
+  projectId: "hk01-9db2f",
+  storageBucket: "hk01-9db2f.appspot.com",
+  messagingSenderId: "284933201147",
+  appId: "1:284933201147:web:50a30760230269287ca45e",
+  measurementId: "G-1N0X0P5PFH"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 //middleware
 app.use(bodyParser.json());
 
